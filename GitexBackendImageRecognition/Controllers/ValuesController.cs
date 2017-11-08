@@ -72,6 +72,7 @@ namespace GitexBackendImageRecognition.Controllers
 
             try
             {
+                //parsing ROI data from the last parsed image
                 var pattern = @"\[(.*?)\]";
                 string text = System.IO.File.ReadAllText("C:\\Users\\vmadmin\\Desktop\\ROIs.txt");
                 var matches = Regex.Matches(text, pattern);
